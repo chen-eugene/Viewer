@@ -8,7 +8,7 @@ abstract class BaseFragment : Fragment() {
 
     companion object {
         fun newInstance(context: Context, bundle: Bundle?): Fragment {
-            return Fragment.instantiate(context, BaseFragment::class.java.name, bundle)
+            return Fragment.instantiate(context, this::class.java.name, bundle)
         }
     }
 

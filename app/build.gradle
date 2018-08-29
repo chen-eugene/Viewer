@@ -33,6 +33,24 @@ android {
                             'src/main/res/layouts',
                             'src/main/res'
                     ]
+
+//            List<String> dirss = ['main']
+//            dirss.each { dir ->
+//                java.srcDirs "src/${dir}/java"
+//                res.srcDirs "src/${dir}/res"
+//                assets.srcDirs "src/${dir}/assets"
+//                resources.srcDirs "src/${dir}/resources"
+//                jniLibs.srcDirs "src/${dir}/jniLibs"
+//            }
+            def module = file("src/module")
+            module.list().each { dir ->
+                java.srcDirs "src/module/${dir}/java"
+                res.srcDirs "src/module/${dir}/res"
+                assets.srcDirs "src/module/${dir}/assets"
+                resources.srcDirs "src/module/${dir}/resources"
+                jniLibs.srcDirs "src/module/${dir}/jniLibs"
+            }
+            manifest.srcFile 'src/main/AndroidManifest.xml'
         }
     }
 }
@@ -40,4 +58,5 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':core')
+    implementation project(':imageloader')
 }

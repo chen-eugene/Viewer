@@ -5,11 +5,14 @@ interface MultiItemType<T> {
     /**
      * 根据type返回不同的布局
      */
-    fun getLayoutId(itemType: Int): Int
+    fun getLayoutId(): Int
 
     /**
-     * 返回视图类型
+     * 根据传入的数据类来判断使用哪一个模板
+     * 是否使用多种布局模式
      */
-    fun getItemViewType(position: Int, t: T): Int
+    fun isThisViewType(data: T, position: Int): Boolean
+
+    fun bindView(holder: BaseHolder, data: T)
 
 }
