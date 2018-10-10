@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".recyclerview.HomePageActivity" />
         <activity android:name=".recyclerview.NestActivity" />
+        <activity android:name=".recyclerview.activity.HomePageActivity" />
     </application>
 
 </manifest>

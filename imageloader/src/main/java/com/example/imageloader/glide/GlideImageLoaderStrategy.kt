@@ -6,12 +6,11 @@ import com.bumptech.glide.GlideBuilder
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.example.core.Preconditions
+import com.eugene.core.utils.Preconditions
 import com.example.imageloader.BaseImageLoaderStrategy
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import timber.log.Timber
 
 class GlideImageLoaderStrategy : BaseImageLoaderStrategy<GlideImageConfig>, GlideAppliesOptions {
 
@@ -125,6 +124,5 @@ class GlideImageLoaderStrategy : BaseImageLoaderStrategy<GlideImageConfig>, Glid
 
 
     override fun applyGlideOptions(context: Context, builder: GlideBuilder) {
-        Timber.w("applyGlideOptions")
     }
 }

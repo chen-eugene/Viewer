@@ -13,7 +13,7 @@ abstract class BaseAdapter<T>(val context: Context, private val layoutId: Int) :
 
     constructor(context: Context, layoutId: Int, data: MutableList<T>) : this(context, layoutId) {
         this.items = data
-        setHasStableIds(true)
+
     }
 
     override fun getItemId(position: Int): Long {

@@ -9,7 +9,8 @@ import android.view.ViewGroup
 import com.eugene.core.utils.RxView
 import com.eugene.core.utils.launchActivity
 import com.eugene.viewer.base.BaseFragment
-import com.eugene.viewer.recyclerview.HomePageActivity
+import com.eugene.viewer.recyclerview.NestActivity
+import com.eugene.viewer.recyclerview.activity.HomePageActivity
 import kotlinx.android.synthetic.main.fragment_recycler.*
 
 class RecyclerFragment : BaseFragment() {
@@ -27,12 +28,22 @@ class RecyclerFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        setListener()
+
+    }
+
+    private fun setListener(){
         RxView.clicks(btn_home_page).subscribe {
             launchActivity<HomePageActivity>(null)
         }
 
-
+        RxView.clicks(btn_nest).subscribe {
+            launchActivity<NestActivity>(null)
+        }
     }
+
+
 
 
 }

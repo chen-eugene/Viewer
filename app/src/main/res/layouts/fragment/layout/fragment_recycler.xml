@@ -7,10 +7,16 @@
 
     <Button
         android:id="@+id/btn_home_page"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="HomePage"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_nest"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Nest"
+        android:textAllCaps="false" />
 
 </LinearLayout>
